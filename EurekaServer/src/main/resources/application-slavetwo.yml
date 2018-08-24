@@ -1,0 +1,11 @@
+##3台集群
+##将master注册到slaveone 和 slavetwo
+##将slaveone注册到master 和 slavetwo
+#server:
+#  port: 8763
+#eureka:
+#  instance:
+#    hostname: slavetwo
+#  client:
+#    service-url:
+#      defaultZone: http://${security.user.name}:${security.user.password}@master:8762/eureka/,http://${security.user.name}:${security.user.password}@slaveone:8762/eureka/

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: MemberConsumer
+server:
+  port: 8082
+eureka:
+  instance:
+    hostname: localhost
+    # 这个不配置一直找不的注册中心
+    prefer-ip-address: true
+#    instance-id: 192.168.0.100:${server.port}
+  client:
+    service-url:
+      defaultZone: http://tom:123456@${eureka.instance.hostname}:8761/eureka/,http://tom:123456@${eureka.instance.hostname}:8762/eureka/

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: EurekaServer
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+# 这就是注册中心所以不需要向自己注册false
+    register-with-eureka: false
+# 不在集群的时候只是维护实例 不需要去检索服务所以为false
+    fetch-registry: false
+    # 服务地址默认是不需要配置也可以找得到的
+#    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+security:
+  basic:
+    enabled: true
+  user:
+    name: tom
+    password: 123456

@@ -1,0 +1,8 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: master
+  client:
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@slaveone:8762/eureka/
